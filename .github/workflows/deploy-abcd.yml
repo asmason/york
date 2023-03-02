@@ -20,5 +20,5 @@ jobs:
         scope: subscription
         region: uksouth
         template: ./Workspace/main.bicep
-        parameters: ./Workspace/parameters.json
+        parameters: uniqueWorkspaceCode=abcd
         failOnStdErr: false
