@@ -29,9 +29,6 @@ resource vnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06
       id: virtualNetworkId
     }
   }
-  dependsOn: [
-    privateDnsZone
-  ]
 }
 
 output id string = privateDnsZone.id
