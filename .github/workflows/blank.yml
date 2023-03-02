@@ -18,6 +18,7 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         scope: subscription
+        region: uksouth
         template: ./Workspace/main.bicep
         parameters: ./Workspace/parameters.json
         failOnStdErr: false
