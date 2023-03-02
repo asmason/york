@@ -19,7 +19,8 @@ resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
 }
 
 resource vnetLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2020-06-01' = if (length(virtualNetworkId) > 0) {
-  name: '${privateDnsZoneName}/${privateDnsZoneName}-link'
+  parent: privateDnsZone
+  name: '${privateDnsZoneName}-link'
   location: location
   tags: tags
   properties: {
